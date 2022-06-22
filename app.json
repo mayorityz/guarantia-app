@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "my-guarantia-app",
+    "slug": "my-guarantia-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
