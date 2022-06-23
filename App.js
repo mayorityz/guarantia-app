@@ -49,7 +49,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="AppHome">
         <Stack.Screen
           name="AppHome"
-          component={BottomStackNavigation}
+          component={AuthStackNavigation}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
