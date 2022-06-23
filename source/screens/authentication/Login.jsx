@@ -1,7 +1,7 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { useNavigation } from '@react-navigation/native'
-import { Text, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import WelcomeSvg from '../../components/svgs/WelcomeSvg'
 import AppWrapper from '../../constants/AppWrapper'
 import { AuthStyle, LogRegScreenApp } from './Style'
@@ -9,6 +9,7 @@ import { GlobalStyle } from '../../constants/GlobalStyle'
 import Button from '../../components/Button'
 import InputField from '../../components/InputFields'
 import { appColor } from '../../constants/Colors'
+import { Auth_Screen_Titles } from '../../constants/Screens'
 
 export default function Login() {
   let navigation = useNavigation()
@@ -26,7 +27,7 @@ export default function Login() {
         ]}
       >
         <Text style={[LogRegScreenApp.Title]}>Guarantia.</Text>
-        <Text>Signin</Text>
+        <Text style={[LogRegScreenApp.desc]}>Signin</Text>
         <View>
           <InputField
             label="Email"
@@ -41,11 +42,19 @@ export default function Login() {
 
           <Button
             btnTitle="Login"
-            btnColor="#00008b"
+            btnColor={appColor.darkBlue}
             textColor="#fff"
             onPress={() => null}
             style={{ marginTop: 5 }}
           />
+          <TouchableOpacity
+            onPress={() => navigation.navigate(Auth_Screen_Titles.REGISTER)}
+          >
+            <Text style={[LogRegScreenApp.actionText]}>
+              Don't own an account?{' '}
+              <Text style={{ color: appColor.yellow }}>Sign up</Text> now!
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
       <StatusBar style="dark" />

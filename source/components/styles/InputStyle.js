@@ -12,7 +12,7 @@ export const inputFieldStyle = StyleSheet.create({
     borderBottomWidth: 1,
     fontFamily: Fonts.Monsterat500,
     marginBottom: 20,
-    borderRadius: 12,
+    borderRadius: 5,
   },
   label: {
     marginBottom: 4,

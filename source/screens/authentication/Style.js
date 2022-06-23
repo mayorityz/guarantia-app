@@ -27,9 +27,22 @@ export const AuthStyle = StyleSheet.create({
 export const LogRegScreenApp = StyleSheet.create({
   Title: {
     fontFamily: Fonts.MonsteratBold,
-    fontSize: 30,
-    textAlign: 'center',
+    fontSize: 40,
+    textAlign: 'left',
     color: '#fff',
-    marginBottom: 30,
+    marginBottom: 10,
+  },
+  actionText: {
+    textAlign: 'right',
+    fontFamily: Fonts.Monsterat500,
+    fontSize: 11,
+    color: '#fff',
+    marginTop: 4,
+  },
+  desc: {
+    color: appColor.yellow,
+    fontSize: 20,
+    marginBottom: 20,
+    fontFamily: Fonts.Monsterat600,
   },
 })
