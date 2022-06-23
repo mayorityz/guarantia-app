@@ -4,7 +4,7 @@ import { Fonts } from '../../constants/Fonts'
 export const BtnStyle = StyleSheet.create({
   defaultBtn: {
     width: '100%',
-    height: 54,
+    height: 60,
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
