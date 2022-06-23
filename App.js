@@ -52,6 +52,11 @@ export default function App() {
           component={AuthStackNavigation}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="AppDashboard"
+          component={BottomStackNavigation}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

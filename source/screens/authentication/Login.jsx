@@ -44,7 +44,7 @@ export default function Login() {
             btnTitle="Login"
             btnColor={appColor.darkBlue}
             textColor="#fff"
-            onPress={() => null}
+            onPress={() => navigation.navigate('AppDashboard')}
             style={{ marginTop: 5 }}
           />
           <TouchableOpacity
