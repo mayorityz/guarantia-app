@@ -17,5 +17,7 @@ export const AuthStyle = StyleSheet.create({
     fontFamily: Fonts.Monsterat500,
     fontSize: 20,
     textAlign: 'center',
+    color: '#010900',
+    marginBottom: 69,
   },
 })

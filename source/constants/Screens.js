@@ -7,6 +7,7 @@ import TransactionStackNavigation from '../navigation/transactions/TransactionSt
 export const Auth_Screen_Titles = {
   LOGIN: 'Login',
   REGISTER: 'Register',
+  WELCOME: 'Welcome',
 }
 
 export const TabScreenNavStack = {
