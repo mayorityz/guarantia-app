@@ -6,16 +6,16 @@ import { DashHomeStyle } from './Style'
 import { Fonts } from '../../../constants/Fonts'
 
 export default function Dashboard() {
-  const actionOptions = [
-    {
-      title: '',
-      desc: '',
-      color: '',
-    },
-  ]
+  // const actionOptions = [
+  //   {
+  //     title: '',
+  //     desc: '',
+  //     color: '',
+  //   },
+  // ]
   return (
     <AppWrapper>
-      <View style={[GlobalStyle.p20]}>
+      {/* <View style={[GlobalStyle.p20]}>
         <Text>Welcome back, Mayowa</Text>
         <View style={[DashHomeStyle.WalletBalance]}>
           <Text style={[DashHomeStyle.WalletValue]}>N0.00</Text>
@@ -43,7 +43,7 @@ export default function Dashboard() {
             </Text>
           </View>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </AppWrapper>
   )
 }
