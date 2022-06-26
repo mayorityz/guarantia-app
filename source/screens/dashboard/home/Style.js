@@ -30,4 +30,23 @@ export const DashHomeStyle = StyleSheet.create({
     color: '#000',
     fontFamily: Fonts.Monsterat500,
   },
+  ongoingStyle: {
+    flexDirection: 'row',
+    height: 55,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 10,
+    backgroundColor: '#f6f6f6',
+  },
+  listItems: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    widt: '100%',
+    height: '100%',
+  },
+  listText: {
+    fontFamily: Fonts.Monsterat500,
+    fontSize: 10,
+  },
 })
