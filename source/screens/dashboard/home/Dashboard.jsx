@@ -7,8 +7,11 @@ import { Fonts } from '../../../constants/Fonts'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import { appColor } from '../../../constants/Colors'
 import { AntDesign } from '@expo/vector-icons'
+import { DashboardScreenTitles } from '../../../constants/Screens'
 
-export default function Dashboard() {
+import { useNavigation } from '@react-navigation/native'
+
+export default function Dashboard({ navigation }) {
   const Tab = createMaterialTopTabNavigator()
   const actionOptions = [
     {
@@ -161,12 +164,18 @@ function IncomingRequests() {
     { amount: 12500, from: "Zee's Grills", time: '2 days ago' },
     { amount: 10500, from: 'Tha247WebGuy', time: '2 days ago' },
   ]
+  let navigation = useNavigation()
   return (
     <>
       <ScrollView>
         {dummyData.map((d) => (
           <View style={{ backgroundColor: '#fff' }}>
-            <TouchableOpacity style={[DashHomeStyle.ongoingStyle]}>
+            <TouchableOpacity
+              style={[DashHomeStyle.ongoingStyle]}
+              onPress={() =>
+                navigation.navigate(DashboardScreenTitles.DASHBOARD_RECEIVED)
+              }
+            >
               <View
                 style={{
                   width: '15%',

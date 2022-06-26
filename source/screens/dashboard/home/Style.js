@@ -50,3 +50,22 @@ export const DashHomeStyle = StyleSheet.create({
     fontSize: 10,
   },
 })
+
+export const RequestScreenStyle = StyleSheet.create({
+  title: {
+    fontFamily: Fonts.Monsterat,
+    fontSize: 12,
+    marginBottom: 3,
+  },
+  sellerText: {
+    fontFamily: Fonts.Monsterat600,
+    fontSize: 22,
+    marginBottom: 10,
+  },
+  sellerDesc: {
+    fontSize: 13,
+    fontFamily: Fonts.Monsterat,
+    marginBottom: 10,
+    color: appColor.charcoal,
+  },
+})
