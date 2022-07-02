@@ -15,136 +15,110 @@ export default function Dashboard({ navigation }) {
   const Tab = createMaterialTopTabNavigator()
   const actionOptions = [
     {
-      title: '',
-      desc: '',
-      color: '',
+      title: 'Generate Payment Link',
+      desc:
+        'Request for payments from customers by creating a unique payment link.',
+      action: '',
+      btnTitle: 'Create Link',
+      id: 'u-1',
+    },
+    {
+      title: 'Fund Wallet',
+      desc:
+        'Fund your wallet to make payments to suppliers, vendors or service providers.',
+      action: '',
+      btnTitle: 'Fund Wallet',
+      id: 'u-2',
+    },
+    {
+      title: 'Withdraw Funds',
+      desc: 'Transfer money from your Guarantia wallet to bank.',
+      action: '',
+      btnTitle: 'Make Withdrawal',
+      id: 'u-3',
     },
   ]
   return (
     <AppWrapper>
-      <View style={[GlobalStyle.p20]}>
-        <Text
-          style={{
-            fontSize: 19,
-            fontFamily: Fonts.Monsterat600,
-            marginTop: 15,
-          }}
-        >
-          Welcome back, Mayowa
-        </Text>
-        <View style={[DashHomeStyle.WalletBalance]}>
-          <Text style={[DashHomeStyle.WalletValue]}>N0.00</Text>
+      <ScrollView>
+        <View style={[GlobalStyle.p20]}>
+          <View style={[DashHomeStyle.welcomeContainer]}>
+            <Text style={[DashHomeStyle.walletText]}>Hello,</Text>
+            <Text
+              style={[
+                DashHomeStyle.walletText,
+                { fontSize: 22, marginTop: -5, fontFamily: Fonts.Monsterat600 },
+              ]}
+            >
+              Mayowa
+            </Text>
+          </View>
+
+          <View style={[DashHomeStyle.WalletBalance]}>
+            <Text style={[DashHomeStyle.WalletHeader]}>Balance</Text>
+            <Text style={[DashHomeStyle.WalletValue]}>N0.00</Text>
+          </View>
+
+          {actionOptions.map((action) => (
+            <View style={[DashHomeStyle.dashboardAction]} key={action.id}>
+              <Text style={[DashHomeStyle.dashboardActionHeader]}>
+                {action.title}
+              </Text>
+              <Text style={[DashHomeStyle.dashboardActionContent]}>
+                {action.desc}
+              </Text>
+              <TouchableOpacity style={[DashHomeStyle.dashboardActionBtn]}>
+                <Text style={[DashHomeStyle.dashboardActionBtnText]}>
+                  {action.btnTitle}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          ))}
+
+          <View
+            style={{
+              width: '100%',
+              height: 1.5,
+              backgroundColor: '#f6f6f6',
+              marginVertical: 15,
+            }}
+          />
+          <View style={{ height: 256 }}>
+            <Tab.Navigator
+              screenOptions={{
+                tabBarLabelStyle: {
+                  fontFamily: Fonts.Monsterat500,
+                  fontSize: 9,
+                  // color: appColor.primaryColor,
+                  textTransform: 'capitalize',
+                },
+                tabBarActiveTintColor: appColor.primaryColor,
+                tabBarStyle: {},
+                tabBarBadge: () => (
+                  <View
+                    style={{
+                      height: 22,
+                      width: 22,
+                      backgroundColor: 'red',
+                      marginRight: 34,
+                      borderRadius: 50,
+                    }}
+                  >
+                    <Text>30</Text>
+                  </View>
+                ),
+                tabBarInactiveTintColor: '#6e7f80',
+              }}
+            >
+              <Tab.Screen
+                name="Received Requests"
+                component={IncomingRequests}
+              />
+              <Tab.Screen name="My Requests" component={S1} />
+            </Tab.Navigator>
+          </View>
         </View>
-
-        <TouchableOpacity style={[DashHomeStyle.actionArea]}>
-          <View
-            style={{
-              width: '30%',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <View style={{ width: 45, height: 45, backgroundColor: '#000' }} />
-          </View>
-          <View style={{ width: '70%' }}>
-            <Text style={[DashHomeStyle.actionAreaText]}>Request Money</Text>
-            <Text
-              style={[
-                DashHomeStyle.actionAreaText,
-                { fontSize: 19, fontFamily: Fonts.MonsteratBold },
-              ]}
-            >
-              Generate Payment Link
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={[DashHomeStyle.actionArea]}>
-          <View
-            style={{
-              width: '30%',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <View style={{ width: 45, height: 45, backgroundColor: '#000' }} />
-          </View>
-          <View style={{ width: '70%' }}>
-            <Text style={[DashHomeStyle.actionAreaText]}>Make Payment</Text>
-            <Text
-              style={[
-                DashHomeStyle.actionAreaText,
-                { fontSize: 19, fontFamily: Fonts.MonsteratBold },
-              ]}
-            >
-              Fund your wallet
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={[DashHomeStyle.actionArea]}>
-          <View
-            style={{
-              width: '30%',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <View style={{ width: 45, height: 45, backgroundColor: '#000' }} />
-          </View>
-          <View style={{ width: '70%' }}>
-            <Text style={[DashHomeStyle.actionAreaText]}>Move to my bank</Text>
-            <Text
-              style={[
-                DashHomeStyle.actionAreaText,
-                { fontSize: 19, fontFamily: Fonts.MonsteratBold },
-              ]}
-            >
-              Withdraw your funds
-            </Text>
-          </View>
-        </TouchableOpacity>
-
-        <View
-          style={{
-            width: '100%',
-            height: 1.5,
-            backgroundColor: '#f6f6f6',
-            marginVertical: 15,
-          }}
-        />
-        <View style={{ height: 256 }}>
-          <Tab.Navigator
-            screenOptions={{
-              tabBarLabelStyle: {
-                fontFamily: Fonts.Monsterat500,
-                fontSize: 9,
-                // color: appColor.primaryColor,
-                textTransform: 'capitalize',
-              },
-              tabBarActiveTintColor: appColor.primaryColor,
-              tabBarStyle: {},
-              tabBarBadge: () => (
-                <View
-                  style={{
-                    height: 22,
-                    width: 22,
-                    backgroundColor: 'red',
-                    marginRight: 34,
-                    borderRadius: 50,
-                  }}
-                >
-                  <Text>30</Text>
-                </View>
-              ),
-              tabBarInactiveTintColor: '#6e7f80',
-            }}
-          >
-            <Tab.Screen name="Received Requests" component={IncomingRequests} />
-            <Tab.Screen name="My Requests" component={S1} />
-          </Tab.Navigator>
-        </View>
-      </View>
+      </ScrollView>
     </AppWrapper>
   )
 }

@@ -5,17 +5,24 @@ import { Fonts } from '../../../constants/Fonts'
 export const DashHomeStyle = StyleSheet.create({
   WalletBalance: {
     width: '100%',
-    height: 180,
+    height: 100,
     backgroundColor: appColor.primaryColor,
-    borderRadius: 5,
+    borderRadius: 15,
     marginTop: 10,
     justifyContent: 'center',
-    alignItems: 'center',
+    paddingLeft: 25,
+    marginBottom: 35,
   },
   WalletValue: {
-    fontSize: 34,
-    fontFamily: Fonts.MonsteratBold,
+    fontSize: 25,
+    fontFamily: Fonts.Monsterat500,
     color: '#fff',
+  },
+  WalletHeader: {
+    color: '#f9f9f9',
+    fontFamily: Fonts.Monsterat,
+    fontSize: 10,
+    marginBottom: -2,
   },
   actionArea: {
     width: '100%',
@@ -48,6 +55,47 @@ export const DashHomeStyle = StyleSheet.create({
   listText: {
     fontFamily: Fonts.Monsterat500,
     fontSize: 10,
+  },
+  welcomeContainer: {
+    marginBottom: 15,
+  },
+  walletText: {
+    fontSize: 19,
+    fontFamily: Fonts.Monsterat,
+    marginTop: 15,
+  },
+  dashboardAction: {
+    height: 190,
+    width: '100%',
+    backgroundColor: '#f6f6f6',
+    paddingVertical: 22,
+    paddingHorizontal: 15,
+    borderRadius: 15,
+    marginBottom: 12,
+  },
+  dashboardActionHeader: {
+    fontSize: 18,
+    color: appColor.charcoal,
+    fontFamily: Fonts.Monsterat500,
+  },
+  dashboardActionContent: {
+    fontSize: 13,
+    color: 'grey',
+    fontFamily: Fonts.Monsterat,
+    marginVertical: 12,
+  },
+  dashboardActionBtn: {
+    height: 50,
+    width: 190,
+    backgroundColor: appColor.charcoal,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 13,
+  },
+  dashboardActionBtnText: {
+    color: '#fff',
+    fontFamily: Fonts.Monsterat,
   },
 })
 
