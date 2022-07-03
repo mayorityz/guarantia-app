@@ -162,7 +162,7 @@ export const RequestScreenStyle = StyleSheet.create({
   bannerText: {
     color: '#fff',
     fontFamily: Fonts.MonsteratBold,
-    fontSize: '40%',
+    fontSize: 23,
   },
   infoContainer: {
     marginBottom: 10,
