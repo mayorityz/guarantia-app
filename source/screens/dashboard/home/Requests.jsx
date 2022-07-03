@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
+import CustomHeader from '../../../components/CustomHeader'
 import InputField from '../../../components/InputFields'
 import AppWrapper from '../../../constants/AppWrapper'
 import { GlobalStyle } from '../../../constants/GlobalStyle'
@@ -8,6 +9,7 @@ import { RequestScreenStyle } from './Style'
 export default function Requests() {
   return (
     <AppWrapper>
+      <CustomHeader title="Request" />
       <ScrollView>
         <View style={[RequestScreenStyle.banner]}>
           <Text style={[RequestScreenStyle.bannerText]}>Request Details</Text>
