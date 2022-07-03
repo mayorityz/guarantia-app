@@ -141,7 +141,7 @@ function IncomingRequests() {
   let navigation = useNavigation()
   return (
     <>
-      <ScrollView>
+      <View>
         {dummyData.map((d) => (
           <View style={{ backgroundColor: '#fff' }}>
             <TouchableOpacity
@@ -178,7 +178,7 @@ function IncomingRequests() {
             </TouchableOpacity>
           </View>
         ))}
-      </ScrollView>
+      </View>
     </>
   )
 }
