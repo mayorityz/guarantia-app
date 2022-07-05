@@ -116,4 +116,66 @@ export const RequestScreenStyle = StyleSheet.create({
     marginBottom: 10,
     color: appColor.charcoal,
   },
+  requestActionsContainer: {
+    width: '100%',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    marginBottom: 20,
+  },
+  requestActionsBtn: {
+    width: '47%',
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  requestActionsBtnSuccess: { backgroundColor: '#2B2D2F' },
+  requestActionsBtnFailure: {
+    borderColor: 'red',
+    borderWidth: 0.2,
+    borderStyle: 'solid',
+  },
+  requestActionsBtnText: {
+    color: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: 15,
+    fontFamily: Fonts.InterMedium,
+  },
+  requestActionsBtnFailureText: {
+    color: 'red',
+  },
+  infoText: {
+    color: appColor.info,
+    fontSize: 10,
+    fontStyle: 'italic',
+    fontFamily: Fonts.Inter500,
+  },
+  banner: {
+    height: 200,
+    width: '100%',
+    backgroundColor: appColor.charcoal,
+    marginBottom: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bannerText: {
+    color: '#fff',
+    fontFamily: Fonts.MonsteratBold,
+    fontSize: 23,
+  },
+  infoContainer: {
+    marginBottom: 10,
+  },
+  imageContainer: {
+    width: '100%',
+    flexDirection: 'row',
+  },
+  image: {
+    width: 100,
+    height: 100,
+    backgroundColor: '#f6f6f6',
+    marginRight: 5,
+    borderRadius: 7,
+  },
 })
