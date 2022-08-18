@@ -5,7 +5,7 @@ import { Fonts } from '../../../constants/Fonts'
 export const DashHomeStyle = StyleSheet.create({
   WalletBalance: {
     width: '100%',
-    height: 180,
+    height: 150,
     backgroundColor: appColor.primaryColor,
     borderRadius: 5,
     marginTop: 10,
@@ -15,19 +15,19 @@ export const DashHomeStyle = StyleSheet.create({
   WalletValue: {
     fontSize: 34,
     fontFamily: Fonts.MonsteratBold,
-    color: '#fff',
+    color: 'rgba(255, 165, 0, 0.9)',
   },
   actionArea: {
     width: '100%',
-    height: 90,
-    backgroundColor: appColor.secondaryColor,
+    height: 80,
+    backgroundColor: "rgba(93, 63, 211, 0.1)",
     marginTop: 20,
     borderRadius: 5,
     flexDirection: 'row',
     alignItems: 'center',
   },
   actionAreaText: {
-    color: '#000',
+    color: appColor.primaryColor,
     fontFamily: Fonts.Monsterat500,
   },
   ongoingStyle: {
@@ -37,7 +37,7 @@ export const DashHomeStyle = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 10,
-    backgroundColor: '#f6f6f6',
+    backgroundColor: 'rgba(255, 165, 0, 0.2)',
   },
   listItems: {
     justifyContent: 'center',

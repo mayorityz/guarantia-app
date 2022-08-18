@@ -31,14 +31,17 @@ export const TabScreenOptions = [
   {
     name: TabScreenNavStack.DASHBOARD,
     component: DashboardStackNavigation,
+    icon: "home"
   },
   {
     name: TabScreenNavStack.TRANSACTIONS,
     component: TransactionStackNavigation,
+    icon: "compare-arrows",
   },
   {
     name: TabScreenNavStack.SETTING,
     component: Settings,
+    icon: "settings"
   },
 ]
 
@@ -61,3 +64,5 @@ export const TransactionStacks = [
     component: Transactions,
   },
 ]
+
+

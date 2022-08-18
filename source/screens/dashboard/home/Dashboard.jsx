@@ -1,33 +1,33 @@
-import React from 'react'
-import AppWrapper from '../../../constants/AppWrapper'
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
-import { GlobalStyle } from '../../../constants/GlobalStyle'
-import { DashHomeStyle } from './Style'
-import { Fonts } from '../../../constants/Fonts'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
-import { appColor } from '../../../constants/Colors'
-import { AntDesign } from '@expo/vector-icons'
-import { DashboardScreenTitles } from '../../../constants/Screens'
-
-import { useNavigation } from '@react-navigation/native'
+import React from "react";
+import AppWrapper from "../../../constants/AppWrapper";
+import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { GlobalStyle } from "../../../constants/GlobalStyle";
+import { DashHomeStyle } from "./Style";
+import { Fonts } from "../../../constants/Fonts";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { appColor } from "../../../constants/Colors";
+import { AntDesign } from "@expo/vector-icons";
+import { DashboardScreenTitles } from "../../../constants/Screens";
+import { useNavigation } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function Dashboard({ navigation }) {
-  const Tab = createMaterialTopTabNavigator()
+  const Tab = createMaterialTopTabNavigator();
   const actionOptions = [
     {
-      title: '',
-      desc: '',
-      color: '',
+      title: "",
+      desc: "",
+      color: "",
     },
-  ]
+  ];
   return (
     <AppWrapper>
       <View style={[GlobalStyle.p20]}>
         <Text
           style={{
-            fontSize: 19,
+            fontSize: 15,
             fontFamily: Fonts.Monsterat600,
-            marginTop: 15,
+            marginTop: 25,
           }}
         >
           Welcome back, Mayowa
@@ -39,19 +39,26 @@ export default function Dashboard({ navigation }) {
         <TouchableOpacity style={[DashHomeStyle.actionArea]}>
           <View
             style={{
-              width: '30%',
-              justifyContent: 'center',
-              alignItems: 'center',
+              width: "25%",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            <View style={{ width: 45, height: 45, backgroundColor: '#000' }} />
+            <View/>
+            <Icon
+              name="link"
+              color= "#5D3FD3"
+              size={29}
+            />
           </View>
-          <View style={{ width: '70%' }}>
-            <Text style={[DashHomeStyle.actionAreaText]}>Request Money</Text>
+          <View style={{ width: "70%" }}>
+            <Text style={[DashHomeStyle.actionAreaText, { color: "#000" }]}>
+              Request Money
+            </Text>
             <Text
               style={[
                 DashHomeStyle.actionAreaText,
-                { fontSize: 19, fontFamily: Fonts.MonsteratBold },
+                { fontSize: 17, fontFamily: Fonts.MonsteratBold },
               ]}
             >
               Generate Payment Link
@@ -62,19 +69,26 @@ export default function Dashboard({ navigation }) {
         <TouchableOpacity style={[DashHomeStyle.actionArea]}>
           <View
             style={{
-              width: '30%',
-              justifyContent: 'center',
-              alignItems: 'center',
+              width: "25%",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            <View style={{ width: 45, height: 45, backgroundColor: '#000' }} />
+            <View/>
+            <Icon
+              name="credit-card"
+              color= "#5D3FD3"
+              size={29}
+            />
           </View>
-          <View style={{ width: '70%' }}>
-            <Text style={[DashHomeStyle.actionAreaText]}>Make Payment</Text>
+          <View style={{ width: "70%" }}>
+            <Text style={[DashHomeStyle.actionAreaText, { color: "#000" }]}>
+              Make Payment
+            </Text>
             <Text
               style={[
                 DashHomeStyle.actionAreaText,
-                { fontSize: 19, fontFamily: Fonts.MonsteratBold },
+                { fontSize: 17, fontFamily: Fonts.MonsteratBold },
               ]}
             >
               Fund your wallet
@@ -85,19 +99,26 @@ export default function Dashboard({ navigation }) {
         <TouchableOpacity style={[DashHomeStyle.actionArea]}>
           <View
             style={{
-              width: '30%',
-              justifyContent: 'center',
-              alignItems: 'center',
+              width: "25%",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            <View style={{ width: 45, height: 45, backgroundColor: '#000' }} />
+            <View/>
+            <Icon
+              name="money"
+              color= "#5D3FD3"
+              size={29}
+            />
           </View>
-          <View style={{ width: '70%' }}>
-            <Text style={[DashHomeStyle.actionAreaText]}>Move to my bank</Text>
+          <View style={{ width: "70%" }}>
+            <Text style={[DashHomeStyle.actionAreaText, { color: "#000" }]}>
+              Move to my bank
+            </Text>
             <Text
               style={[
                 DashHomeStyle.actionAreaText,
-                { fontSize: 19, fontFamily: Fonts.MonsteratBold },
+                { fontSize: 17, fontFamily: Fonts.MonsteratBold },
               ]}
             >
               Withdraw your funds
@@ -107,9 +128,9 @@ export default function Dashboard({ navigation }) {
 
         <View
           style={{
-            width: '100%',
+            width: "100%",
             height: 1.5,
-            backgroundColor: '#f6f6f6',
+            backgroundColor: "#f6f6f6",
             marginVertical: 15,
           }}
         />
@@ -118,26 +139,33 @@ export default function Dashboard({ navigation }) {
             screenOptions={{
               tabBarLabelStyle: {
                 fontFamily: Fonts.Monsterat500,
-                fontSize: 9,
+                fontSize: 10,
                 // color: appColor.primaryColor,
-                textTransform: 'capitalize',
+                textTransform: "capitalize",
               },
-              tabBarActiveTintColor: appColor.primaryColor,
+              tabBarActiveTintColor: "#000",
               tabBarStyle: {},
+              tabBarIndicatorStyle: {
+                backgroundColor: appColor.primaryColor,
+              },
               tabBarBadge: () => (
                 <View
                   style={{
-                    height: 22,
-                    width: 22,
-                    backgroundColor: 'red',
+                    // height: 22,
+                    // width: 22,
+                    backgroundColor: "rgba(255, 165, 0, 1)",
                     marginRight: 34,
                     borderRadius: 50,
                   }}
                 >
-                  <Text>30</Text>
+                  <Text
+                    style={{ fontSize: 8, textAlign: "center", padding: 3 }}
+                  >
+                    30
+                  </Text>
                 </View>
               ),
-              tabBarInactiveTintColor: '#6e7f80',
+              tabBarInactiveTintColor: "#6e7f80",
             }}
           >
             <Tab.Screen name="Received Requests" component={IncomingRequests} />
@@ -146,30 +174,30 @@ export default function Dashboard({ navigation }) {
         </View>
       </View>
     </AppWrapper>
-  )
+  );
 }
 
 function S1() {
   return (
-    <View style={{ backgroundColor: '#fff', height: 256, padding: 12 }}>
+    <View style={{ backgroundColor: "#fff", height: 256, padding: 12 }}>
       <Text>ok</Text>
     </View>
-  )
+  );
 }
 
 function IncomingRequests() {
   let dummyData = [
-    { amount: 4500, from: 'Gention Global', time: '2 days ago' },
-    { amount: 5500, from: 'Anita Idibia', time: '2 days ago' },
-    { amount: 12500, from: "Zee's Grills", time: '2 days ago' },
-    { amount: 10500, from: 'Tha247WebGuy', time: '2 days ago' },
-  ]
-  let navigation = useNavigation()
+    { amount: 4500, from: "Gention Global", time: "2 days ago" },
+    { amount: 5500, from: "Anita Idibia", time: "2 days ago" },
+    { amount: 12500, from: "Zee's Grills", time: "2 days ago" },
+    { amount: 10500, from: "Tha247WebGuy", time: "2 days ago" },
+  ];
+  let navigation = useNavigation();
   return (
     <>
       <ScrollView>
         {dummyData.map((d) => (
-          <View style={{ backgroundColor: '#fff' }}>
+          <View style={{ backgroundColor: "#fff" }}>
             <TouchableOpacity
               style={[DashHomeStyle.ongoingStyle]}
               onPress={() =>
@@ -178,27 +206,23 @@ function IncomingRequests() {
             >
               <View
                 style={{
-                  width: '15%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  height: '100%',
+                  width: "15%",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
                 }}
               >
                 <View>
-                  <AntDesign
-                    name="arrowdown"
-                    size={17}
-                    color={appColor.primaryColor}
-                  />
+                  <AntDesign name="arrowdown" size={12} color="red" />
                 </View>
               </View>
-              <View style={{ width: '25%' }}>
+              <View style={{ width: "25%" }}>
                 <Text style={[DashHomeStyle.listText]}>N{d.amount}</Text>
               </View>
-              <View style={{ width: '30%' }}>
+              <View style={{ width: "30%" }}>
                 <Text style={[DashHomeStyle.listText]}>{d.from}</Text>
               </View>
-              <View style={{ width: '30%' }}>
+              <View style={{ width: "30%" }}>
                 <Text style={[DashHomeStyle.listText]}>{d.time}</Text>
               </View>
             </TouchableOpacity>
@@ -206,5 +230,5 @@ function IncomingRequests() {
         ))}
       </ScrollView>
     </>
-  )
+  );
 }
