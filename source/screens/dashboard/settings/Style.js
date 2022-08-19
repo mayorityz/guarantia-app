@@ -6,15 +6,19 @@ export const settingHomeStyle = StyleSheet.create({
   item: {
     height: 80,
     width: '100%',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     paddingLeft: 17,
+    paddingRight: 25,
     marginBottom: 5,
     backgroundColor: '#f6f6f6',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   itemText: {
     fontFamily: Fonts.Monsterat,
     fontSize: 15,
     color: appColor.blackLight500,
+    marginLeft: 20,
   },
   profileBanner: {
     height: 300,
@@ -39,5 +43,10 @@ export const settingHomeStyle = StyleSheet.create({
     fontFamily: Fonts.Monsterat,
     textAlign: 'center',
     fontSize: 15,
+  },
+  itemBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })

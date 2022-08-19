@@ -61,3 +61,5 @@ export const TransactionStacks = [
     component: Transactions,
   },
 ]
+
+// Settings Stack

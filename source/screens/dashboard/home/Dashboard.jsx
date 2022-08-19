@@ -83,7 +83,7 @@ export default function Dashboard({ navigation }) {
               marginVertical: 15,
             }}
           />
-          <View style={{ height: 256 }}>
+          <View style={{ height: 356 }}>
             <Tab.Navigator
               screenOptions={{
                 tabBarLabelStyle: {
