@@ -1,7 +1,7 @@
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { useNavigation } from '@react-navigation/native'
-import { Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity, View, Image } from 'react-native'
 import WelcomeSvg from '../../components/svgs/WelcomeSvg'
 import AppWrapper from '../../constants/AppWrapper'
 import { AuthStyle, LogRegScreenApp } from './Style'
@@ -10,6 +10,7 @@ import Button from '../../components/Button'
 import InputField from '../../components/InputFields'
 import { appColor } from '../../constants/Colors'
 import { Auth_Screen_Titles } from '../../constants/Screens'
+import Logo from '../../components/Logo'
 
 export default function Login() {
   let navigation = useNavigation()
@@ -26,7 +27,7 @@ export default function Login() {
           },
         ]}
       >
-        <Text style={[LogRegScreenApp.Title]}>Guarantia.</Text>
+        <Logo />
         <Text style={[LogRegScreenApp.desc]}>Signin</Text>
         <View>
           <InputField

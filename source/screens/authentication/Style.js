@@ -40,9 +40,10 @@ export const LogRegScreenApp = StyleSheet.create({
     marginTop: 4,
   },
   desc: {
-    color: appColor.yellow,
+    color: '#fff',
     fontSize: 20,
-    marginBottom: 20,
     fontFamily: Fonts.Monsterat600,
+    marginTop: '10%',
+    marginBottom: 30,
   },
 })

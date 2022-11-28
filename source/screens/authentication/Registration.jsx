@@ -8,6 +8,7 @@ import Button from '../../components/Button'
 import InputField from '../../components/InputFields'
 import { appColor } from '../../constants/Colors'
 import { Auth_Screen_Titles } from '../../constants/Screens'
+import Logo from '../../components/Logo'
 
 export default function Registration() {
   let navigation = useNavigation()
@@ -24,11 +25,12 @@ export default function Registration() {
           },
         ]}
       >
-        <Text style={[LogRegScreenApp.Title]}>Guarantia.</Text>
+        {/* <Text style={[LogRegScreenApp.Title]}>Guarantia.</Text> */}
+        <Logo />
         <Text style={[LogRegScreenApp.desc]}>Create Account</Text>
         <View>
           <InputField
-            label="Username"
+            label="Username/Business Name"
             borderColor={appColor.primaryColor}
             labelColor="#fff"
           />

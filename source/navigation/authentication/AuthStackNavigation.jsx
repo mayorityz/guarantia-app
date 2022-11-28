@@ -28,6 +28,7 @@ export default function AuthStackNavigation() {
           name={screen.name}
           component={screen.component}
           options={{ headerShown: false }}
+          key={screen.name}
         />
       ))}
     </Stack.Navigator>
